@@ -1,0 +1,80 @@
+---
+title: "Google Analytics"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+    highlight-style: github
+---
+
+This portfolio is live-instrumented with **Google Analytics 4 (GA4)** — not just as a tracking tool, but as a demonstration of real production analytics skills. Every pageview, recruiter interaction, and conversion is measured and attributed.
+
+---
+
+## Property configuration
+
+GA4 is connected through Quarto's native integration, requiring only a few lines in `_quarto.yml`:
+
+```yaml
+website:
+  google-analytics:
+    tracking-id: "_quarto.yml"
+    anonymize-ip: true
+```
+
+---
+
+## What gets tracked
+
+Standard pageviews are captured out of the box. On top of that, four custom events fire on recruiter-relevant actions:
+
+| Event | Fired when | Why it matters |
+|---|---|---|
+| `resume_download` | Resume PDF is clicked | Strongest signal of recruiter interest |
+| `project_view` | A case study is opened | Shows which work resonates |
+| `contact_click` | Email or LinkedIn is clicked | Indicates outreach intent |
+| `presentation_viewed` | Presentation page loads | Measures technical content reach |
+
+Each event is attached via `gtag('event', ...)` on the relevant page element.
+
+---
+
+## Conversion tracking
+
+Two events are elevated to **Key Events** in GA4:
+
+- **Resume download** — the clearest indicator a recruiter is seriously interested
+- **Contact click** — signals the visitor is moving toward direct outreach
+
+Together they enable a simple but meaningful funnel: *land → explore → convert*.
+
+---
+
+## SEO setup
+
+Discoverability is handled at the `_quarto.yml` level:
+
+```yaml
+website:
+  open-graph: true
+  twitter-card: true
+  title: "Kelly Liang | Marketing Analytics"
+  description: "Portfolio of Kelly Liang — Marketing Analytics professional skilled in R, Excel, and Google Analytics."
+```
+
+---
+
+## Search Console
+
+The site is verified in Google Search Console, providing visibility into:
+
+- Which search queries surface the portfolio
+- Click-through rates by page
+- Core Web Vitals and mobile usability
+- Indexing coverage and any crawl errors
+
+---
+
+## Reporting
+
+A Looker Studio dashboard is connected directly to this GA4 property, surfacing traffic, engagement, and conversion data in a shareable format. This closes the loop from raw instrumentation all the way through to stakeholder-ready reporting.

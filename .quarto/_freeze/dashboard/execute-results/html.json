@@ -1,0 +1,17 @@
+{
+  "hash": "89d6a7bee82aed727aae63911dacb23c",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: \"Marketing Analytics Dashboard\"\nformat: \n  dashboard:\n    orientation: columns\n    theme: cosmo\n---\n\n## Column {width=60%}\n\n### Gen Z Market Analysis: Costco Strategy\nThis visualization analyzes consumer sentiment regarding \"Roommate Family Plans\" developed for the **Costco Wholesale** proposal.\n\n\n::: {.cell title='Gen Z Interest in Shared Consumer Models'}\n::: {.cell-output-display}\n![](dashboard_files/figure-html/unnamed-chunk-1-1.png){width=768}\n:::\n:::\n",
+    "supporting": [
+      "dashboard_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

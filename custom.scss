@@ -1,0 +1,149 @@
+/*-- scss:defaults --*/
+
+// ── Color Palette ─────────────────────────────────────────
+$navy:        #0A1628;
+$navy-mid:    #132040;
+$navy-light:  #1E3060;
+$gold:        #C9A84C;
+$gold-light:  #E8C97A;
+$gold-pale:   #F5EDD8;
+$cream:       #FAFAF7;
+$gray-text:   #6B7280;
+
+// ── Quarto Theme Overrides ─────────────────────────────────
+$body-bg:             $cream;
+$body-color:          $navy;
+$link-color:          $gold;
+$link-hover-color:    $gold-light;
+
+$navbar-bg:           $navy;
+$navbar-fg:           rgba(255,255,255,0.8);
+$navbar-hl:           $gold;
+
+$footer-bg:           $navy-mid;
+$footer-fg:           rgba(255,255,255,0.5);
+
+$font-family-base:    'DM Sans', sans-serif;
+$headings-font-family:'Playfair Display', Georgia, serif;
+$headings-color:      $navy;
+
+$border-radius:       2px;
+$border-color:        #E5E7EB;
+
+/*-- scss:rules --*/
+
+// ── Google Fonts Import ────────────────────────────────────
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=DM+Sans:wght@300;400;500&display=swap');
+
+// ── Global Utilities ───────────────────────────────────────
+.gold-line {
+  width: 48px;
+  height: 3px;
+  background: $gold;
+  margin: 1.25rem 0;
+}
+
+.section-label {
+  font-size: 11px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: $gold;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.btn-gold {
+  background: $gold;
+  color: $navy;
+  border: none;
+  padding: 0.75rem 2rem;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 2px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.2s;
+  &:hover { background: $gold-light; color: $navy; text-decoration: none; }
+}
+
+.btn-outline {
+  background: transparent;
+  color: $gold;
+  border: 1px solid $gold;
+  padding: 0.75rem 2rem;
+  font-size: 13px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border-radius: 2px;
+  font-weight: 500;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.2s;
+  &:hover { background: $gold; color: $navy; text-decoration: none; }
+}
+
+// ── Navbar ─────────────────────────────────────────────────
+.navbar-brand { color: $gold !important; font-family: 'Playfair Display', serif; font-size: 1.15rem; }
+.navbar-nav .nav-link { font-size: 13px; letter-spacing: 0.5px; text-transform: uppercase; }
+.navbar-nav .nav-link.active { color: $gold !important; }
+
+// ── Cards ──────────────────────────────────────────────────
+.proj-card {
+  background: white;
+  border: 1px solid #E5E7EB;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin-bottom: 1.5rem;
+  &:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(10,22,40,0.1); }
+}
+
+.kpi-card {
+  background: white;
+  border: 1px solid #E5E7EB;
+  border-radius: 4px;
+  padding: 1.25rem;
+  text-align: left;
+  .kpi-label { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; color: $gray-text; margin-bottom: 0.4rem; }
+  .kpi-value { font-family: 'Playfair Display', serif; font-size: 2rem; color: $navy; font-weight: 700; }
+  .kpi-delta { font-size: 12px; color: #16a34a; margin-top: 0.25rem; }
+  .kpi-delta.neg { color: #dc2626; }
+}
+
+// ── Hero Section ───────────────────────────────────────────
+.hero-section {
+  background: $navy;
+  padding: 6rem 3rem;
+  color: white;
+  .hero-tagline { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: $gold; margin-bottom: 1rem; }
+  h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 5vw, 3.5rem); color: white; line-height: 1.15; }
+  h1 span { color: $gold; }
+  p { color: rgba(255,255,255,0.72); line-height: 1.8; max-width: 560px; }
+}
+
+// ── Page Headers ───────────────────────────────────────────
+.page-header {
+  background: $navy;
+  padding: 4rem 3rem 3rem;
+  h1 { font-family: 'Playfair Display', serif; color: white; margin-bottom: 0.5rem; }
+  p { color: rgba(255,255,255,0.6); font-size: 0.95rem; }
+}
+
+// ── Tags & Badges ──────────────────────────────────────────
+.proj-tag {
+  background: $gold-pale;
+  color: #8a6a1a;
+  font-size: 10px;
+  padding: 3px 8px;
+  border-radius: 2px;
+  display: inline-block;
+  margin: 2px;
+}
+
+.badge-green { background: #dcfce7; color: #166534; font-size: 11px; padding: 2px 8px; border-radius: 2px; }
+.badge-amber { background: #fef3c7; color: #92400e; font-size: 11px; padding: 2px 8px; border-radius: 2px; }
+.badge-red   { background: #fee2e2; color: #991b1b; font-size: 11px; padding: 2px 8px; border-radius: 2px; }

@@ -1,0 +1,28 @@
+---
+title: "Marketing Analytics Dashboard"
+format: 
+  dashboard:
+    orientation: columns
+    theme: cosmo
+---
+
+## Column {width=60%}
+
+### Gen Z Market Analysis: Costco Strategy
+This visualization analyzes consumer sentiment regarding "Roommate Family Plans" developed for the **Costco Wholesale** proposal.
+
+```{r}
+#| title: "Gen Z Interest in Shared Consumer Models"
+library(ggplot2)
+# Data representing your marketing strategy research
+data <- data.frame(
+  Strategy = c("Meal Prep", "Bulk Buying", "Shared Plans"), 
+  Interest_Score = c(82, 74, 91)
+)
+
+ggplot(data, aes(x=Strategy, y=Interest_Score, fill=Strategy)) + 
+  geom_bar(stat="identity") + 
+  scale_fill_manual(values=c("#0A1628", "#C9A84C", "#1E3060")) +
+  theme_minimal() +
+  labs(y = "Interest Level (%)", x = NULL)
+```

@@ -1,0 +1,31 @@
+project:
+  type: website
+  output-dir: _site
+
+website:
+  title: "Kelly Liang"
+  google-analytics: "G-PSW1MY7HB4"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: projects.qmd
+        text: Projects
+      - href: analytics.qmd 
+        text: Analytics
+      - href: dashboard.qmd
+        text: Dashboard
+      - href: presentation.qmd
+        text: Presentation
+      - href: contact.qmd
+        text: Contact
+    right:
+      - icon: linkedin
+        href: https://www.linkedin.com/in/kellyliang1345675
+      - icon: github
+        href: https://github.com/kellylcpp
+
+format:
+  html:
+    theme: cosmo
+    toc: false

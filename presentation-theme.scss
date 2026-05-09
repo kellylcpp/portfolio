@@ -1,0 +1,23 @@
+/*-- scss:defaults --*/
+$navy:      #0A1628;
+$navy-mid:  #132040;
+$gold:      #C9A84C;
+$white:     #FFFFFF;
+
+$backgroundColor: $navy;
+$mainColor:       $white;
+$headingColor:    $white;
+$linkColor:       $gold;
+
+$headingFont: 'Playfair Display', Georgia, serif;
+$mainFont:    'DM Sans', sans-serif;
+$headingFontWeight: 700;
+
+/*-- scss:rules --*/
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=DM+Sans:wght@300;400;500&display=swap');
+
+.reveal .slide-number { color: $gold; }
+.reveal .progress     { color: $gold; }
+.reveal blockquote    { border-left: 3px solid $gold; }
+.reveal strong        { color: $gold; }
+.reveal .footer       { color: rgba(255,255,255,0.45); font-size: 0.75rem; }

@@ -1,0 +1,318 @@
+---
+title: "The Future of Entertainment Marketing"
+subtitle: "Data-Driven Strategies for the Streaming Era"
+author: "Kelly Liang"
+date: today
+format:
+  revealjs:
+    theme: [default, presentation-theme.scss]
+    slide-number: true
+    transition: fade
+    background-transition: fade
+    footer: "Kelly Liang · Entertainment Marketing Portfolio"
+    progress: true
+    width: 1280
+    height: 720
+    fig-align: center
+execute:
+  echo: false
+  warning: false
+  message: false
+---
+
+```{r}
+#| label: setup
+
+library(ggplot2)
+library(dplyr)
+library(tidyr)
+library(scales)
+library(forcats)
+
+navy       <- "#0A1628"
+navy_light <- "#1E3060"
+gold       <- "#C9A84C"
+gray_text  <- "#6B7280"
+white      <- "#FFFFFF"
+grid_dark  <- "#2a3f5f"
+
+theme_slide_dark <- function() {
+  theme_minimal(base_family = "sans", base_size = 13) +
+  theme(
+    plot.background    = element_rect(fill = "transparent", color = NA),
+    panel.background   = element_rect(fill = "transparent", color = NA),
+    panel.grid.minor   = element_blank(),
+    panel.grid.major   = element_line(color = grid_dark, linewidth = 0.4),
+    axis.text          = element_text(color = white, size = 11),
+    axis.title         = element_text(color = white, size = 11),
+    legend.background  = element_rect(fill = "transparent", color = NA),
+    legend.key         = element_rect(fill = "transparent", color = NA),
+    legend.text        = element_text(color = white, size = 10),
+    legend.title       = element_blank(),
+    plot.title         = element_text(color = gold, size = 14, face = "bold",
+                                      margin = margin(b = 8)),
+    plot.caption       = element_text(color = gray_text, size = 9),
+    plot.margin        = margin(8, 12, 8, 12)
+  )
+}
+```
+
+# Industry Landscape {background-color="#0A1628"}
+
+[MARKET OVERVIEW]{style="font-size:0.7rem;letter-spacing:3px;color:#C9A84C;"}
+
+```{r}
+#| label: streaming-trend
+#| fig-width: 7
+#| fig-height: 3.2
+
+trend_df <- tibble(
+  Year    = c(2020, 2021, 2022, 2023, 2024),
+  Revenue = c(13.4, 15.9, 17.5, 19.1, 20.8)
+)
+
+ggplot(trend_df, aes(x = Year, y = Revenue)) +
+  geom_area(fill = gold, alpha = 0.18) +
+  geom_line(color = gold, linewidth = 1.8) +
+  geom_point(color = gold, size = 4, fill = navy, shape = 21, stroke = 2) +
+  geom_text(aes(label = paste0("$", Revenue, "B")),
+            vjust = -1.2, color = white, size = 3.8, fontface = "bold") +
+  scale_x_continuous(breaks = trend_df$Year) +
+  scale_y_continuous(labels = label_dollar(suffix = "B"),
+                     limits = c(10, 25),
+                     expand = expansion(mult = c(0, 0.05))) +
+  labs(title = "Global Streaming Revenue ($B)",
+       subtitle = "Music streaming crossed $20B in 2024 — up 55% since 2020",
+       x = NULL, y = NULL) +
+  theme_slide_dark() +
+  theme(
+    panel.grid.major.x = element_blank(),
+    plot.subtitle = element_text(color = gray_text, size = 11, margin = margin(b = 6))
+  )
+```
+
+::: {style="display:grid;grid-template-columns:repeat(4,1fr);gap:0.75rem;margin-top:0.5rem;"}
+::: {style="background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.3);border-radius:4px;padding:0.6rem;text-align:center;"}
+[**$20B**]{style="color:#C9A84C;font-size:1.2rem;font-weight:700;"} [Global streaming revenue]{style="color:rgba(255,255,255,0.6);font-size:0.72rem;display:block;"}
+:::
+::: {style="background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.3);border-radius:4px;padding:0.6rem;text-align:center;"}
+[**+32%**]{style="color:#C9A84C;font-size:1.2rem;font-weight:700;"} [Podcast YoY growth 18–34]{style="color:rgba(255,255,255,0.6);font-size:0.72rem;display:block;"}
+:::
+::: {style="background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.3);border-radius:4px;padding:0.6rem;text-align:center;"}
+[**78%**]{style="color:#C9A84C;font-size:1.2rem;font-weight:700;"} [Gen Z discover via social]{style="color:rgba(255,255,255,0.6);font-size:0.72rem;display:block;"}
+:::
+::: {style="background:rgba(201,168,76,0.1);border:1px solid rgba(201,168,76,0.3);border-radius:4px;padding:0.6rem;text-align:center;"}
+[**$31B**]{style="color:#C9A84C;font-size:1.2rem;font-weight:700;"} [Live events market rebound]{style="color:rgba(255,255,255,0.6);font-size:0.72rem;display:block;"}
+:::
+:::
+
+# Audience Segmentation {background-color="#132040"}
+
+[ANALYTICS]{style="font-size:0.7rem;letter-spacing:3px;color:#C9A84C;"}
+
+### Three High-Value Listener Clusters
+
+```{r}
+#| label: segment-chart
+#| fig-width: 10
+#| fig-height: 3.6
+
+segments <- tibble(
+  Segment   = c("Discovery Seekers", "Loyalists", "Casual Streamers"),
+  Share     = c(25, 42, 33),
+  Avg_Hours = c(4.2, 3.1, 1.8),
+  Conv_Rate = c(5.1, 6.8, 2.4)
+)
+
+seg_long <- segments |>
+  pivot_longer(c(Share, Avg_Hours, Conv_Rate),
+               names_to  = "Metric",
+               values_to = "Value") |>
+  mutate(
+    Metric  = recode(Metric,
+                     "Share"     = "Audience Share (%)",
+                     "Avg_Hours" = "Daily Streaming Hrs",
+                     "Conv_Rate" = "Conversion Rate (%)"),
+    Segment = factor(Segment,
+                     levels = c("Discovery Seekers", "Loyalists", "Casual Streamers"))
+  )
+
+pal_seg <- c(
+  "Discovery Seekers" = navy_light,
+  "Loyalists"         = gold,
+  "Casual Streamers"  = "#64748b"
+)
+
+ggplot(seg_long, aes(x = Segment, y = Value, fill = Segment)) +
+  geom_col(width = 0.6, show.legend = FALSE) +
+  geom_text(aes(label = Value),
+            vjust = -0.5, color = white, size = 4, fontface = "bold") +
+  scale_fill_manual(values = pal_seg) +
+  scale_y_continuous(expand = expansion(mult = c(0, 0.22))) +
+  facet_wrap(~Metric, scales = "free_y") +
+  labs(x = NULL, y = NULL) +
+  theme_slide_dark() +
+  theme(
+    strip.text         = element_text(color = gold, size = 11, face = "bold"),
+    strip.background   = element_rect(fill = "transparent", color = NA),
+    panel.grid.major.x = element_blank(),
+    axis.text.x        = element_text(size = 10)
+  )
+```
+
+# Platform Strategy {background-color="#0A1628"}
+
+[STRATEGY]{style="font-size:0.7rem;letter-spacing:3px;color:#C9A84C;"}
+
+### Where to Invest: Reach vs Engagement
+
+```{r}
+#| label: platform-chart
+#| fig-width: 10
+#| fig-height: 3.8
+
+platform_df <- tibble(
+  Platform = c("TikTok", "Instagram", "YouTube", "Twitter/X", "Spotify Ads"),
+  Reach_K  = c(310, 280, 140, 90, 95),
+  Eng_Rate = c(9.1, 7.4, 5.6, 4.2, 3.8),
+  CPA      = c(1.80, 2.10, 3.40, 5.10, 4.20)
+) |>
+  mutate(
+    fill_col = case_when(
+      Platform == "TikTok"    ~ gold,
+      Platform == "Instagram" ~ navy_light,
+      TRUE                    ~ "#475569"
+    )
+  )
+
+ggplot(platform_df,
+       aes(x = Reach_K, y = Eng_Rate,
+           size  = 1 / CPA,
+           color = fill_col,
+           label = Platform)) +
+  geom_point(alpha = 0.85) +
+  geom_text(vjust = -1.4, color = white, size = 3.8, fontface = "bold") +
+  scale_color_identity() +
+  scale_size_continuous(range = c(6, 20), guide = "none") +
+  scale_x_continuous(labels = label_comma(suffix = "K"),
+                     expand = expansion(mult = c(0.05, 0.1))) +
+  scale_y_continuous(labels = label_percent(scale = 1),
+                     expand = expansion(mult = c(0.1, 0.25))) +
+  labs(
+    title    = "Platform Reach vs. Engagement Rate",
+    subtitle = "Bubble size = cost efficiency (larger = lower CPA = better ROI)",
+    x = "Monthly Reach (thousands)", y = "Engagement Rate (%)"
+  ) +
+  theme_slide_dark() +
+  theme(plot.subtitle = element_text(color = gray_text, size = 10, margin = margin(b = 6)))
+```
+
+# Campaign Results {background-color="#132040"}
+
+[OUTCOMES]{style="font-size:0.7rem;letter-spacing:3px;color:#C9A84C;"}
+
+### Streaming Platform Launch · Before vs After
+
+```{r}
+#| label: results-chart
+#| fig-width: 9
+#| fig-height: 3.5
+
+results_df <- tibble(
+  Metric = c("Brand Awareness", "App Downloads",
+             "Social Followers", "Trial Sign-ups"),
+  Before = c(12, 0, 5, 0),
+  After  = c(47, 84, 38, 62)
+) |>
+  pivot_longer(c(Before, After),
+               names_to  = "Period",
+               values_to = "Value") |>
+  mutate(
+    Metric = factor(Metric, levels = c("Brand Awareness", "App Downloads",
+                                       "Social Followers", "Trial Sign-ups")),
+    Period = factor(Period, levels = c("Before", "After"))
+  )
+
+ggplot(results_df, aes(x = Value, y = Metric, fill = Period)) +
+  geom_col(position = "dodge", width = 0.6) +
+  geom_text(aes(label = paste0(Value, "%")),
+            position = position_dodge(width = 0.6),
+            hjust = -0.15, color = white, size = 3.8, fontface = "bold") +
+  scale_fill_manual(values = c("Before" = "#475569", "After" = gold)) +
+  scale_x_continuous(limits = c(0, 105),
+                     expand = expansion(mult = c(0, 0.02)),
+                     labels = label_percent(scale = 1)) +
+  labs(title = "Before vs. After Campaign (% of goal)", x = NULL, y = NULL) +
+  theme_slide_dark() +
+  theme(panel.grid.major.y = element_blank(), legend.position = "top")
+```
+
+::: {style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:0.25rem;font-size:0.85rem;"}
+::: {}
+✅ **40%** brand awareness lift in target demo  
+✅ Cost per acquisition: **$2.10** (goal was $3.00)
+:::
+::: {}
+✅ **500K+** combined influencer reach  
+⚠️ Twitter/X budget reallocated to TikTok in Week 3
+:::
+:::
+
+# Recommendations {background-color="#0A1628"}
+
+[NEXT STEPS]{style="font-size:0.7rem;letter-spacing:3px;color:#C9A84C;"}
+
+### Prioritized Investment by Expected ROI
+
+```{r}
+#| label: recommendations-chart
+#| fig-width: 9
+#| fig-height: 3.8
+
+recs_df <- tibble(
+  Action    = c("TikTok-First Content", "Creator Partnerships",
+                "Hybrid Live Events",   "Spotify Editorial",
+                "First-Party Data",     "AI Email Personalization"),
+  ROI_Score = c(9.2, 8.5, 8.0, 7.8, 7.1, 6.4),
+  Effort    = c("Low", "Medium", "High", "Low", "High", "Medium"),
+  Timeline  = c("0–3 mo", "0–3 mo", "12–18 mo",
+                "3–6 mo", "6–12 mo", "6–12 mo")
+) |>
+  mutate(
+    Action   = fct_reorder(Action, ROI_Score),
+    fill_col = case_when(
+      Effort == "Low"    ~ gold,
+      Effort == "Medium" ~ navy_light,
+      TRUE               ~ "#475569"
+    )
+  )
+
+ggplot(recs_df, aes(x = ROI_Score, y = Action, fill = fill_col)) +
+  geom_col(width = 0.6) +
+  geom_text(aes(label = paste0(ROI_Score, " / 10  ·  ", Timeline)),
+            hjust = -0.08, color = white, size = 3.5, fontface = "bold") +
+  scale_fill_identity() +
+  scale_x_continuous(limits = c(0, 12), expand = expansion(mult = c(0, 0.02))) +
+  labs(
+    title   = "Recommended Actions by Expected ROI Score",
+    caption = "Gold = Low effort  |  Navy = Medium effort  |  Gray = High effort",
+    x = "ROI Score (out of 10)", y = NULL
+  ) +
+  theme_slide_dark() +
+  theme(
+    panel.grid.major.y = element_blank(),
+    panel.grid.major.x = element_line(color = grid_dark, linewidth = 0.4)
+  )
+```
+
+# Thank You {background-color="#0A1628" visibility="uncounted"}
+
+::: {style="text-align:center;padding-top:3rem;"}
+
+[Let's talk entertainment marketing]{style="color:rgba(255,255,255,0.6);font-size:1.1rem;display:block;margin-top:0.5rem;"}
+
+<!-- Replace with your actual email and LinkedIn -->
+[your.email@email.com]{style="color:#C9A84C;font-size:1rem;display:block;margin-top:2.5rem;letter-spacing:1px;"}
+[linkedin.com/in/yourprofile]{style="color:#C9A84C;font-size:1rem;display:block;margin-top:0.4rem;letter-spacing:1px;"}
+
+:::
