@@ -1,0 +1,212 @@
+[
+  {
+    "objectID": "presentation.html#section",
+    "href": "presentation.html#section",
+    "title": "The Future of Entertainment Marketing",
+    "section": "",
+    "text": "ENTERTAINMENT MARKETING\n\nThe Future of Entertainment Marketing\n\n\nData-Driven Strategies for the Streaming Era\nKelly Liang · 2025"
+  },
+  {
+    "objectID": "presentation.html#industry-landscape",
+    "href": "presentation.html#industry-landscape",
+    "title": "The Future of Entertainment Marketing",
+    "section": "Industry Landscape",
+    "text": "Industry Landscape\nMARKET OVERVIEW\n\n\n\n$20B Global streaming revenue\n\n\n+32% Podcast YoY growth (18–34)\n\n\n78% Gen Z discover music via social\n\n\n$31B Live events market rebound"
+  },
+  {
+    "objectID": "presentation.html#audience-segmentation",
+    "href": "presentation.html#audience-segmentation",
+    "title": "The Future of Entertainment Marketing",
+    "section": "Audience Segmentation",
+    "text": "Audience Segmentation\nANALYTICS\nThree High-Value Listener Clusters"
+  },
+  {
+    "objectID": "presentation.html#platform-strategy",
+    "href": "presentation.html#platform-strategy",
+    "title": "The Future of Entertainment Marketing",
+    "section": "Platform Strategy",
+    "text": "Platform Strategy\nSTRATEGY\nWhere to Invest: Reach vs Engagement"
+  },
+  {
+    "objectID": "presentation.html#campaign-results",
+    "href": "presentation.html#campaign-results",
+    "title": "The Future of Entertainment Marketing",
+    "section": "Campaign Results",
+    "text": "Campaign Results\nOUTCOMES\nStreaming Platform Launch · Before vs After\n\n\n\n✅ 40% brand awareness lift in target demo\n✅ Cost per acquisition: $2.10 (goal was $3.00)\n\n\n✅ 500K+ combined influencer reach\n⚠️ Twitter/X budget reallocated to TikTok in Week 3"
+  },
+  {
+    "objectID": "presentation.html#recommendations",
+    "href": "presentation.html#recommendations",
+    "title": "The Future of Entertainment Marketing",
+    "section": "Recommendations",
+    "text": "Recommendations\nNEXT STEPS\nPrioritized Investment by Expected ROI"
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Marketing Strategy & Research\nI specialize in the intersection of data-driven research and entertainment marketing, focusing on Gen Z consumer trends and strategic brand pivots.\n\nCostco “Roommate Economy” Pivot\n\nDeveloped a marketing strategy proposal for Costco Wholesale focusing on “Roommate Family Plans”.\nDesigned “Meal Prep” campaigns to target younger demographics.\nDrafted a detailed report and presentation script regarding Costco’s pivot to the “Roommate Economy”.\n\n\n\nStudent Research Participation Study\n\nConducted a research project examining how student grade expectations influence attitudes toward research participation.\nProvided specific variables (IV: expected grade, DV: attitudes) and survey data for the study.\n\n\n\nIBM3202: Marketing Research Methodology\n\nApplied research questions and data analysis specifically for the IBM301 course.\nFocused on evidence-based strategic recommendations for organizational challenges.\n\n\nCurrently seeking internships or entry-level roles in Los Angeles, CA."
+  },
+  {
+    "objectID": "dashboard.html",
+    "href": "dashboard.html",
+    "title": "Marketing Analytics Dashboard",
+    "section": "",
+    "text": "This visualization analyzes consumer sentiment regarding “Roommate Family Plans” developed for the Costco Wholesale proposal.\n#| title: “Gen Z Interest in Shared Consumer Models” library(ggplot2) # Data representing your marketing strategy research data &lt;- data.frame( Strategy = c(“Meal Prep”, “Bulk Buying”, “Shared Plans”), Interest_Score = c(82, 74, 91) )\nggplot(data, aes(x=Strategy, y=Interest_Score, fill=Strategy)) + geom_bar(stat=“identity”) + scale_fill_manual(values=c(“#0A1628”, “#C9A84C”, “#1E3060”)) + theme_minimal() + labs(y = “Interest Level (%)”, x = NULL)"
+  },
+  {
+    "objectID": "dashboard.html#monthly-reach-by-platform",
+    "href": "dashboard.html#monthly-reach-by-platform",
+    "title": "Campaign Performance Dashboard",
+    "section": "Monthly Reach by Platform",
+    "text": "Monthly Reach by Platform"
+  },
+  {
+    "objectID": "dashboard.html#engagement-budget",
+    "href": "dashboard.html#engagement-budget",
+    "title": "Campaign Performance Dashboard",
+    "section": "Engagement & Budget",
+    "text": "Engagement & Budget"
+  },
+  {
+    "objectID": "dashboard.html#campaign-performance-summary",
+    "href": "dashboard.html#campaign-performance-summary",
+    "title": "Campaign Performance Dashboard",
+    "section": "Campaign Performance Summary",
+    "text": "Campaign Performance Summary\n\n\n\n\n\n\n\n\nCampaign\nPlatform\nReach\nEngagement\nConv. Rate\nStatus\n\n\n\n\nStreaming Launch Q1\nInstagram\n840K\n7.4%\n3.8%\nActive\n\n\nIndie Film Promo\nTikTok\n620K\n9.1%\n2.2%\nActive\n\n\nFestival Awareness\nTwitter/X\n310K\n4.2%\n1.9%\nPaused\n\n\nArtist Collab Drop\nMulti-Platform\n580K\n11.3%\n4.7%\nActive\n\n\nPodcast Growth Push\nSpotify Ads\n95K\n3.8%\n2.1%\nEnded"
+  },
+  {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Contact",
+    "section": "",
+    "text": "Marketing Strategy & Research\nI specialize in entertainment marketing with a focus on Gen Z consumer trends. My recent work includes a marketing strategy proposal for Costco Wholesale, specifically analyzing the “Roommate Economy” and meal-prep campaigns for younger demographics.\n\n\nCore Competencies\n\nStrategic Marketing: Developing roommate-focused family plans for major retailers.\nData Analysis: Researching student attitudes and grade expectations in academic settings.\nBrand Aesthetics: A focus on minimalist, curated visual design.\n\n\n\nGet in Touch\nI am currently based in Los Angeles, CA and am open to internships or entry-level roles at record labels, film studios, and creative agencies.\nEmail: kelly.liang310@email.com\nLinkedIn: linkedin.com/in/kellyliang1345675"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Kelly Liang",
+    "section": "",
+    "text": "Entertainment Marketing Strategist & Researcher\nI am a marketing professional specializing in the intersection of data-driven research and consumer behavior. My work focuses on identifying emerging trends within the Gen Z demographic and developing strategic pivots for major brands.\nEducation * B.S. in Marketing | Currently enrolled in IBM301.\nCore Skills * Strategic Planning: Developed “Roommate Economy” marketing proposals for Costco Wholesale. * Data Analysis: Conducted academic research on student attitudes toward research participation. * Leadership: Focused on executive-level strategy and organizational leadership.\nCareer Objective Seeking to leverage my background in marketing methodology and consumer psychographics to drive growth within the Los Angeles entertainment industry."
+  },
+  {
+    "objectID": "dashboard.html#column",
+    "href": "dashboard.html#column",
+    "title": "Marketing Analytics Dashboard",
+    "section": "",
+    "text": "This visualization analyzes consumer sentiment regarding “Roommate Family Plans” developed for the Costco Wholesale proposal.\n#| title: “Gen Z Interest in Shared Consumer Models” library(ggplot2) # Data representing your marketing strategy research data &lt;- data.frame( Strategy = c(“Meal Prep”, “Bulk Buying”, “Shared Plans”), Interest_Score = c(82, 74, 91) )\nggplot(data, aes(x=Strategy, y=Interest_Score, fill=Strategy)) + geom_bar(stat=“identity”) + scale_fill_manual(values=c(“#0A1628”, “#C9A84C”, “#1E3060”)) + theme_minimal() + labs(y = “Interest Level (%)”, x = NULL)"
+  },
+  {
+    "objectID": "analytics.html",
+    "href": "analytics.html",
+    "title": "Google Analytics",
+    "section": "",
+    "text": "This portfolio is live-instrumented with Google Analytics 4 (GA4) — not just as a tracking tool, but as a demonstration of real production analytics skills. Every pageview, recruiter interaction, and conversion is measured and attributed."
+  },
+  {
+    "objectID": "analytics.html#ga4-property-setup",
+    "href": "analytics.html#ga4-property-setup",
+    "title": "Google Analytics",
+    "section": "GA4 property setup",
+    "text": "GA4 property setup\nThe GA4 tracking snippet is embedded in Quarto’s _quarto.yml using the built-in Google Analytics integration:\n# In _quarto.yml\nwebsite:\n  google-analytics:\n    tracking-id: \"G-9H4032DBJD\"\n    anonymize-ip: true\nThis automatically injects the gtag.js script across all pages with no additional configuration."
+  },
+  {
+    "objectID": "analytics.html#custom-events-being-tracked",
+    "href": "analytics.html#custom-events-being-tracked",
+    "title": "Google Analytics",
+    "section": "Custom events being tracked",
+    "text": "Custom events being tracked\nBeyond pageviews, the following custom events are configured to track meaningful recruiter actions:\n\n\n\n\n\n\n\n\nEvent name\nTrigger\nPurpose\n\n\n\n\nresume_download\nClick on resume PDF link\nMeasure recruiter interest\n\n\nproject_view\nClick into a project case study\nIdentify most-read content\n\n\ncontact_click\nClick on email or LinkedIn\nTrack outreach intent\n\n\npresentation_viewed\nLoad of presentation.qmd\nMeasure technical content reach\n\n\n\nCustom events are added via inline JavaScript on relevant elements using gtag('event', 'event_name', {parameters}) attached to the onclick attribute of the relevant anchor or button element."
+  },
+  {
+    "objectID": "analytics.html#conversion-goals",
+    "href": "analytics.html#conversion-goals",
+    "title": "Google Analytics",
+    "section": "Conversion goals",
+    "text": "Conversion goals\nTwo primary conversions are configured in GA4:\n\nResume download — A recruiter downloaded the resume (strongest intent signal)\nContact click — A recruiter clicked the LinkedIn or email link\n\nThese are marked as Key Events in the GA4 interface, allowing funnel analysis from page entry → project view → contact action."
+  },
+  {
+    "objectID": "analytics.html#seo-instrumentation",
+    "href": "analytics.html#seo-instrumentation",
+    "title": "Google Analytics",
+    "section": "SEO instrumentation",
+    "text": "SEO instrumentation\nIn addition to behavioral analytics, the site is optimized for search visibility:\n\nPage-level metadata — each .qmd file includes a description field rendered as &lt;meta name=\"description\"&gt;.\nOpen Graph tags — Quarto’s og: fields are set for social sharing previews.\nCanonical URLs — the site-url in _quarto.yml ensures consistent canonical links.\nSitemap — Quarto auto-generates sitemap.xml, submitted to Google Search Console."
+  },
+  {
+    "objectID": "analytics.html#viewing-the-data",
+    "href": "analytics.html#viewing-the-data",
+    "title": "Google Analytics",
+    "section": "Viewing the data",
+    "text": "Viewing the data\nLive data is available in the GA4 property dashboard under the property G-PSW1MY7HB4. Key reports used:\n\nEngagement → Events — to monitor custom event counts\nAcquisition → Traffic acquisition — to see referral vs. direct vs. search\nExplore → Funnel exploration — to analyze the recruiter journey from landing → project view → contact"
+  },
+  {
+    "objectID": "analytics.html#privacy-considerations",
+    "href": "analytics.html#privacy-considerations",
+    "title": "Google Analytics",
+    "section": "Privacy considerations",
+    "text": "Privacy considerations\n\nanonymize-ip: true is set so no full IP addresses are stored.\nA cookie consent notice is not currently displayed, as this is a personal portfolio with no commercial data collection.\nNo personally identifiable information (PII) is sent to GA4."
+  },
+  {
+    "objectID": "analytics.html#seo-configuration",
+    "href": "analytics.html#seo-configuration",
+    "title": "Google Analytics",
+    "section": "SEO configuration",
+    "text": "SEO configuration\nThe site is optimized for search engine discoverability using the following techniques.\n\nMeta tags\nEvery page includes Open Graph and Twitter Card meta tags configured via _quarto.yml:\nwebsite:\n  open-graph: true\n  twitter-card: true\n  title: \"Austin Voth | Marketing Analytics\"\n  description: \"Portfolio of Austin Voth — Marketing Analytics professional skilled in R, Excel, and Google Analytics.\"\n\n\nSitemap\nQuarto automatically generates a sitemap.xml at build time. This is submitted to Google Search Console to accelerate crawl indexing.\n\n\nSemantic HTML\nAll pages use proper heading hierarchy (h1 → h2 → h3) and descriptive title and description front-matter fields so search engines understand page content."
+  },
+  {
+    "objectID": "analytics.html#google-search-console-integration",
+    "href": "analytics.html#google-search-console-integration",
+    "title": "Google Analytics",
+    "section": "Google Search Console integration",
+    "text": "Google Search Console integration\nThe portfolio is connected to Google Search Console to monitor:\n\nKeyword impressions and click-through rate\nPage indexing status\nCore Web Vitals scores\nMobile usability issues"
+  },
+  {
+    "objectID": "analytics.html#looker-studio-live-report",
+    "href": "analytics.html#looker-studio-live-report",
+    "title": "Google Analytics",
+    "section": "Looker Studio live report",
+    "text": "Looker Studio live report\nA public-facing Looker Studio report is connected to this site’s GA4 property, displaying real-time traffic, engagement, and conversion metrics. This demonstrates end-to-end analytics fluency — from instrumentation to reporting.\n\n\n\n\n\n\n\nTip\n\n\n\nTo connect your own GA4: Replace G-XXXXXXXXXX in _quarto.yml with your Measurement ID from analytics.google.com, then rebuild and redeploy the site."
+  },
+  {
+    "objectID": "analytics.html#property-configuration",
+    "href": "analytics.html#property-configuration",
+    "title": "Google Analytics",
+    "section": "Property configuration",
+    "text": "Property configuration\nGA4 is connected through Quarto’s native integration, requiring only a few lines in _quarto.yml:\nwebsite:\n  google-analytics:\n    tracking-id: \"_quarto.yml\"\n    anonymize-ip: true"
+  },
+  {
+    "objectID": "analytics.html#what-gets-tracked",
+    "href": "analytics.html#what-gets-tracked",
+    "title": "Google Analytics",
+    "section": "What gets tracked",
+    "text": "What gets tracked\nStandard pageviews are captured out of the box. On top of that, four custom events fire on recruiter-relevant actions:\n\n\n\n\n\n\n\n\nEvent\nFired when\nWhy it matters\n\n\n\n\nresume_download\nResume PDF is clicked\nStrongest signal of recruiter interest\n\n\nproject_view\nA case study is opened\nShows which work resonates\n\n\ncontact_click\nEmail or LinkedIn is clicked\nIndicates outreach intent\n\n\npresentation_viewed\nPresentation page loads\nMeasures technical content reach\n\n\n\nEach event is attached via gtag('event', ...) on the relevant page element."
+  },
+  {
+    "objectID": "analytics.html#conversion-tracking",
+    "href": "analytics.html#conversion-tracking",
+    "title": "Google Analytics",
+    "section": "Conversion tracking",
+    "text": "Conversion tracking\nTwo events are elevated to Key Events in GA4:\n\nResume download — the clearest indicator a recruiter is seriously interested\nContact click — signals the visitor is moving toward direct outreach\n\nTogether they enable a simple but meaningful funnel: land → explore → convert."
+  },
+  {
+    "objectID": "analytics.html#seo-setup",
+    "href": "analytics.html#seo-setup",
+    "title": "Google Analytics",
+    "section": "SEO setup",
+    "text": "SEO setup\nDiscoverability is handled at the _quarto.yml level:\nwebsite:\n  open-graph: true\n  twitter-card: true\n  title: \"Kelly Liang | Marketing Analytics\"\n  description: \"Portfolio of Kelly Liang — Marketing Analytics professional skilled in R, Excel, and Google Analytics.\""
+  },
+  {
+    "objectID": "analytics.html#search-console",
+    "href": "analytics.html#search-console",
+    "title": "Google Analytics",
+    "section": "Search Console",
+    "text": "Search Console\nThe site is verified in Google Search Console, providing visibility into:\n\nWhich search queries surface the portfolio\nClick-through rates by page\nCore Web Vitals and mobile usability\nIndexing coverage and any crawl errors"
+  },
+  {
+    "objectID": "analytics.html#reporting",
+    "href": "analytics.html#reporting",
+    "title": "Google Analytics",
+    "section": "Reporting",
+    "text": "Reporting\nA Looker Studio dashboard is connected directly to this GA4 property, surfacing traffic, engagement, and conversion data in a shareable format. This closes the loop from raw instrumentation all the way through to stakeholder-ready reporting."
+  }
+]
